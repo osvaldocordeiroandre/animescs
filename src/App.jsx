@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 
+import {MdDarkMode, MdOutlineDarkMode} from 'react-icons/md';
+
 import './App.css';
 
 import ScrollToTop from 'react-scroll-to-top';
 
 export default function App() {
   const [animes, setAnimes] = useState([
+    {nome:'Haikyuu!! Movie 1 - Owari to Hajimari', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1132789961649819718/Haikyuu_Movie_1_-_Owari_to_Hajimari.png', link:'https://www.playbook.com/s/ajksz/Eiig8DW39geUdkMjyqpyR127'},
+    {nome:'Haikyuu!! Movie 2 - Shousha to Haisha', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1132789969476390932/Haikyuu_Movie_2_-_Shousha_to_Haisha.png', link:'https://www.playbook.com/s/ajksz/Y9SEzLHsx8Qtq1jb9mnCiTQU'},
+    {nome:'Haikyuu!! Movie 3 - Sainou to Sense', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1132789978364121189/Haikyuu_Movie_3_-_Sainou_to_Sense.png', link:'https://www.playbook.com/s/ajksz/UBBwXu6bd6CtRwPEZmA6uUdq'},
+    {nome:'Haikyuu!! Movie 4 - Concept no Tatakai', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1132789986203271289/Haikyuu_Movie_4_-_Concept_no_Tatakai.png', link:'https://www.playbook.com/s/ajksz/mrr2waQhdKuQ6yfaZ2mtP1fd'},
+    {nome:'Black Lagoon', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1132791464590589952/Black_Lagoon.png', link:'https://www.playbook.com/s/ajksz/vWcT3S3ZcYL4Wj4WuoorFxbn'},
+    {nome:'Devilman Crybaby', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1132791475957153883/Devilman_Crybaby.png', link:'https://www.playbook.com/s/ajksz/vqzpVfURBStUcjEPSbU7j7x9'},
     {nome: 'Shingeki no Kyojin 1, Attack on Titan 1', imagem: 'https://cdn.discordapp.com/attachments/1117138599469666415/1132759367230431304/Attack_on_Titan_Season_1.png', link:'https://www.playbook.com/s/ajksz/X6vBUfS9v39dDUE22CWK8Y2C'},
     {nome: 'Shingeki no Kyojin 2, Attack on Titan 2', imagem: 'https://cdn.discordapp.com/attachments/1117138599469666415/1132759377313546280/Attack_on_Titan_Season_2.png', link:'https://www.playbook.com/s/ajksz/MC9iq94PJDg39dmFTAKjdZ8P'},
     {nome: 'Shingeki no Kyojin 3, Attack on Titan 3', imagem: 'https://cdn.discordapp.com/attachments/1117138599469666415/1132759387593785494/Attack_on_Titan_Season_3.png', link:'https://www.playbook.com/s/ajksz/waM4TpKgGZR6smcELRrhVGzL'},
@@ -43,6 +51,32 @@ export default function App() {
   ]);
 
   const [searchTerm, setSearchTerm] = useState('');
+  const [theme, setTheme] = useState('dark-mode');
+  const [moonColor, setMoonColor] = useState('white')
+
+  const AddTheme = () => {
+    const newTheme = theme === 'dark-mode'? 'light-mode' : 'dark-mode';
+    setTheme(newTheme);
+
+    if(newTheme === 'light-mode'){
+
+      document.body.style.background = 'white'
+
+      document.getElementById('logo-image').src = 'https://cdn.discordapp.com/attachments/1128837208397320234/1128837231788949644/logo-animescs.png'
+
+    } else if(newTheme === 'dark-mode'){
+
+      document.body.style.background = '#242424'
+
+      document.getElementById('logo-image').src = 'https://cdn.discordapp.com/attachments/1128837208397320234/1128838159376068618/logo-animescs-white.png'
+
+    }
+  }
+
+  const AddMoonColor = () => {
+    const newMooncolor = moonColor === 'white' ? 'black' : 'white'
+    setMoonColor(newMooncolor)
+  }
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
@@ -51,14 +85,16 @@ export default function App() {
   const filteredAnimes = animes.filter((anime) => anime.nome.toLowerCase().includes(searchTerm.toLowerCase()));
 
   return (
-    <div className='content-all'>
+    <div className={theme} id='content-all'>
 
-      <header> <a href="#"><img className='logo-animecs' src="https://cdn.discordapp.com/attachments/1128837208397320234/1128838159376068618/logo-animescs-white.png" alt="" /></a> </header>
+      <div className="thememod" onClick={AddMoonColor} > <MdDarkMode fill={moonColor} onClick={AddTheme} cursor={'pointer'} size={20} /> </div>
+
+      <header> <a href="#"><img className='logo-animecs' id='logo-image' src="https://cdn.discordapp.com/attachments/1128837208397320234/1128838159376068618/logo-animescs-white.png" alt="" /></a> </header>
 
       <ScrollToTop/>
 
       <div className='search-content'>
-        <input className='search-part' type="text" name="" id="" placeholder='Anime Name' onChange={handleSearch} />
+        <input className='search-part' type="text" name="" id="" placeholder='Anime name...' onChange={handleSearch} />
       </div>
 
       <div className='anime-space-content'>

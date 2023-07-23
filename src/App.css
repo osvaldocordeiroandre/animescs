@@ -8,11 +8,22 @@ body{
   background-color: rgb(36, 36, 36);
 }
 
-.content-all{
+#content-all{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  animation: SlideY 1s;
+
+}
+
+@keyframes SlideY{
+  from {
+    transform: translateY(30px);
+  } to {
+    transform: translateY(0px);
+  }
 }
 
 .search-content{
@@ -66,9 +77,28 @@ body{
 .anime-images:hover{
   transform: scale(1.1);
   transition: .5s ;
+
 }
 
 .logo-animecs{
   width: 100px;
 
+}
+
+.thememod{
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  margin-right: 30px;
+  margin-top: 30px;
+
+}
+
+.light-mode{
+  background-color: white;
+}
+
+.dark-mode{
+  background-color: rgb(36, 36, 36);
 }
