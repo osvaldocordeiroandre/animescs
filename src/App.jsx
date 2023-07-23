@@ -6,6 +6,10 @@ import ScrollToTop from 'react-scroll-to-top';
 
 export default function App() {
   const [animes, setAnimes] = useState([
+    {nome: 'Shingeki no Kyojin 1, Attack on Titan 1', imagem: 'https://cdn.discordapp.com/attachments/1117138599469666415/1132759367230431304/Attack_on_Titan_Season_1.png', link:'https://www.playbook.com/s/ajksz/X6vBUfS9v39dDUE22CWK8Y2C'},
+    {nome: 'Shingeki no Kyojin 2, Attack on Titan 2', imagem: 'https://cdn.discordapp.com/attachments/1117138599469666415/1132759377313546280/Attack_on_Titan_Season_2.png', link:'https://www.playbook.com/s/ajksz/MC9iq94PJDg39dmFTAKjdZ8P'},
+    {nome: 'Shingeki no Kyojin 3, Attack on Titan 3', imagem: 'https://cdn.discordapp.com/attachments/1117138599469666415/1132759387593785494/Attack_on_Titan_Season_3.png', link:'https://www.playbook.com/s/ajksz/waM4TpKgGZR6smcELRrhVGzL'},
+    {nome: 'Shingeki no Kyojin 4, Attack on Titan 4', imagem: 'https://cdn.discordapp.com/attachments/1117138599469666415/1132759399132319775/Attack_on_Titan_Season_4.png', link:'https://www.playbook.com/s/ajksz/dGjYBQ8TcqnRYAREGLwKkk4T'},
     {nome: 'Bersek Movie', imagem: 'https://cdn.discordapp.com/attachments/1117138599469666415/1130655362664648784/bersek.png', link: 'https://www.playbook.com/s/ajksz/Fme1L8hynLAYDkKpm7AFbcAp'},
     {nome: 'My Dress up Darling, Sono Bisque Doll wa Koi wo Suru ', imagem: 'https://cdn.discordapp.com/attachments/1117138599469666415/1130655388686102658/my-dress-up-darling.png', link: 'https://www.playbook.com/s/ajksz/73DWBU429xxnRGFKHQzwrDLj'},
     { nome: 'Your Name, Kimi no Na wa', imagem: 'https://cdn.discordapp.com/attachments/1117138599469666415/1117145183172165722/your-name.png', link: ' https://www.playbook.com/s/ajksz/Nzd9xrKqdEQjN8B2v6hQ1uzs ' },
