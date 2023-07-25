@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { NavLink } from 'react-router-dom';
 
-import {MdDarkMode} from 'react-icons/md';
+import {MdDarkMode, MdFirstPage, MdLastPage } from 'react-icons/md';
 
 import './Home.css';
 
@@ -58,8 +58,8 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
   const [theme, setTheme] = useState('dark-mode');
   const [moonColor, setMoonColor] = useState('white');
-  const [errormensagem, setErrorMensagem] = useState('');
   const [showmensagem, setShowMensagem] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -105,12 +105,28 @@ export default function Home() {
 
     if(e.target.value !== '' && filteredAnimes.length === 0){
       setShowMensagem(true);
+      document.getElementById('pagesid').style.display = 'none';
     } else {
       setShowMensagem(false)
+      document.getElementById('pagesid').style.display = 'block';
     }
   };
 
   const filteredAnimes = animes.filter((anime) => anime.nome.toLowerCase().includes(searchTerm.toLowerCase()));
+
+  const itenPorPagina = 28;
+  const totalPaginas = Math.ceil(filteredAnimes.length / itenPorPagina);
+  const indexInicio = (currentPage - 1) * itenPorPagina;
+  const indexFim = indexInicio + itenPorPagina;
+  const animesPaginaAtual = filteredAnimes.slice(indexInicio, indexFim);
+
+  const irParaPaginaAnterior = () =>{
+    setCurrentPage((paginaAnterior) => Math.max(paginaAnterior -1, 1))
+  }
+
+  const irParaProximaPagina = () =>{
+    setCurrentPage((proximaPagina) => Math.min(proximaPagina +1, totalPaginas))
+  }
 
   return (
     <div className={theme} id='content-all'>
@@ -129,7 +145,7 @@ export default function Home() {
 
       <div className='anime-space-content'>
 
-        {filteredAnimes.map((anime) => (
+        {animesPaginaAtual.map((anime) => (
 
           <div className='spance-capas' key={anime.nome}>
 
@@ -137,9 +153,15 @@ export default function Home() {
 
           </div>
 
-        ))}
+        ))}        
 
       </div>
+
+      <div className="paginas" id='pagesid'>
+          <button onClick={irParaPaginaAnterior} disabled={currentPage === 1}> <MdFirstPage fill='black' /> </button>
+          <span>{`${currentPage} / ${totalPaginas}`}</span>
+          <button onClick={irParaProximaPagina} disabled={currentPage === totalPaginas}> <MdLastPage fill='black' /> </button>
+        </div>
 
     </div>
   );
