@@ -85,10 +85,13 @@ export default function Home() {
       document.body.style.background = 'white'
 
       document.getElementById('logo-image').src = 'https://cdn.discordapp.com/attachments/1128837208397320234/1128837231788949644/logo-animescs.png'
+      document.getElementById('contagem').style.color = '#000000';
+      
 
     } else if(newTheme === 'dark-mode'){
 
       document.body.style.background = '#242424'
+      document.getElementById('contagem').style.color = '#FFFFFF';
 
       document.getElementById('logo-image').src = 'https://cdn.discordapp.com/attachments/1128837208397320234/1128838159376068618/logo-animescs-white.png'
 
@@ -159,9 +162,9 @@ export default function Home() {
       </div>
 
       <div className="paginas" id='pagesid'>
-          <button onClick={irParaPaginaAnterior} disabled={currentPage === 1}> <MdFirstPage fill='black' /> </button>
-          <span>{`${currentPage} / ${totalPaginas}`}</span>
-          <button onClick={irParaProximaPagina} disabled={currentPage === totalPaginas}> <MdLastPage fill='black' /> </button>
+          <button onClick={irParaPaginaAnterior} disabled={currentPage === 1} > <MdFirstPage fill='black' /> </button>
+          <span id='contagem'>{`${currentPage} / ${totalPaginas}`}</span>
+          <button onClick={irParaProximaPagina} disabled={currentPage === totalPaginas} > <MdLastPage fill='black' /> </button>
         </div>
 
     </div>
