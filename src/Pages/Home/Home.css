@@ -132,3 +132,17 @@ body{
 ::-webkit-scrollbar{
   width: 6px;
 }
+
+.error-search{
+  color: #868686;
+
+  animation: Error 1s;
+}
+
+@keyframes Error{
+  from {
+    transform: translateY(30px);
+  } to {
+    transform: translateY(0px);
+  }
+}

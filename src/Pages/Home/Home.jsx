@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import { NavLink } from 'react-router-dom';
+
 import {MdDarkMode} from 'react-icons/md';
 
 import './Home.css';
@@ -56,6 +58,8 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
   const [theme, setTheme] = useState('dark-mode');
   const [moonColor, setMoonColor] = useState('white');
+  const [errormensagem, setErrorMensagem] = useState('');
+  const [showmensagem, setShowMensagem] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -98,6 +102,12 @@ export default function Home() {
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
+
+    if(e.target.value !== '' && filteredAnimes.length === 0){
+      setShowMensagem(true);
+    } else {
+      setShowMensagem(false)
+    }
   };
 
   const filteredAnimes = animes.filter((anime) => anime.nome.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -107,13 +117,15 @@ export default function Home() {
 
       <div className="thememod" onClick={AddMoonColor} > <MdDarkMode fill={moonColor} onClick={AddTheme} cursor={'pointer'} size={20} /> </div>
 
-      <header> <a href="#"><img className='logo-animecs' id='logo-image' src="https://cdn.discordapp.com/attachments/1128837208397320234/1128838159376068618/logo-animescs-white.png" alt="" /></a> </header>
+      <header><NavLink to={'/'}><img className='logo-animecs' id='logo-image' src="https://cdn.discordapp.com/attachments/1128837208397320234/1128838159376068618/logo-animescs-white.png" alt="" /></NavLink> </header>
 
       <ScrollToTop/>
 
       <div className='search-content'>
         <input className='search-part' type="text" name="" id="" placeholder='Anime name...' onChange={handleSearch} />
       </div>
+
+      {showmensagem && <p className='error-search'> Anime não encontrado... </p>}
 
       <div className='anime-space-content'>
 
