@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import {MdDarkMode, MdOutlineDarkMode} from 'react-icons/md';
 
@@ -55,7 +55,22 @@ export default function App() {
 
   const [searchTerm, setSearchTerm] = useState('');
   const [theme, setTheme] = useState('dark-mode');
-  const [moonColor, setMoonColor] = useState('white')
+  const [moonColor, setMoonColor] = useState('white');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const images = document.querySelectorAll('.anime-images');
+
+      images.forEach((image) => {
+        const rect = image.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+        image.classList.toggle('hidden', !isVisible)
+      })
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+  }, []);
 
   const AddTheme = () => {
     const newTheme = theme === 'dark-mode'? 'light-mode' : 'dark-mode';
