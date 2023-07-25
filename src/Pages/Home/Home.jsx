@@ -106,7 +106,8 @@ export default function Home() {
     if(e.target.value !== '' && filteredAnimes.length === 0){
       setShowMensagem(true);
       document.getElementById('pagesid').style.display = 'none';
-    } else {
+    }
+    else {
       setShowMensagem(false)
       document.getElementById('pagesid').style.display = 'block';
     }
@@ -114,7 +115,7 @@ export default function Home() {
 
   const filteredAnimes = animes.filter((anime) => anime.nome.toLowerCase().includes(searchTerm.toLowerCase()));
 
-  const itenPorPagina = 28;
+  const itenPorPagina = 40;
   const totalPaginas = Math.ceil(filteredAnimes.length / itenPorPagina);
   const indexInicio = (currentPage - 1) * itenPorPagina;
   const indexFim = indexInicio + itenPorPagina;
