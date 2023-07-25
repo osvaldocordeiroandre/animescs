@@ -50,6 +50,16 @@ body{
   text-align: center;
 
   background-color: rgb(66, 66, 66);
+
+  animation: Searchx 1s;
+}
+
+@keyframes Searchx{
+  from {
+    transform: translateX(50px);
+  } to {
+    transform: translateX(0);
+  }
 }
 
 .anime-space-content{

@@ -8,6 +8,9 @@ import ScrollToTop from 'react-scroll-to-top';
 
 export default function App() {
   const [animes, setAnimes] = useState([
+    {nome:'I Want To Eat Your Pancreas', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1133206198783574076/I_want_to_eat_your_pancreas.png', link:'https://www.playbook.com/s/ajksz/Z6YAttgbwBnKpJrmQ17XTfsB'},
+    {nome:'Jujutsu Kaisen Season 1', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1133206209038655538/Jujutsu_Kaisen_Season_1.png', link:'https://www.playbook.com/s/ajksz/CaKP9pJ2ZmtNeML5VBcc6EdL'},
+    {nome:'K Project', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1133206219671207997/K_Project.png', link:'https://www.playbook.com/s/ajksz/ihsqKbfJb6raceu5Zd7qYwgP'},
     {nome:'Haikyuu!! Movie 1 - Owari to Hajimari', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1132789961649819718/Haikyuu_Movie_1_-_Owari_to_Hajimari.png', link:'https://www.playbook.com/s/ajksz/Eiig8DW39geUdkMjyqpyR127'},
     {nome:'Haikyuu!! Movie 2 - Shousha to Haisha', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1132789969476390932/Haikyuu_Movie_2_-_Shousha_to_Haisha.png', link:'https://www.playbook.com/s/ajksz/Y9SEzLHsx8Qtq1jb9mnCiTQU'},
     {nome:'Haikyuu!! Movie 3 - Sainou to Sense', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1132789978364121189/Haikyuu_Movie_3_-_Sainou_to_Sense.png', link:'https://www.playbook.com/s/ajksz/UBBwXu6bd6CtRwPEZmA6uUdq'},
