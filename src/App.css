@@ -14,16 +14,6 @@ body{
   align-items: center;
   flex-direction: column;
 
-  animation: SlideY 1s;
-
-}
-
-@keyframes SlideY{
-  from {
-    transform: translateY(30px);
-  } to {
-    transform: translateY(0px);
-  }
 }
 
 .search-content{
@@ -71,6 +61,17 @@ body{
   margin-top: 40px;
 
   margin: 0 10%;
+
+  animation: SlideY 1s;
+}
+
+@keyframes SlideY{
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  } to {
+    transform: translateY(0px);
+  }
 }
 
 .spance-capas{
