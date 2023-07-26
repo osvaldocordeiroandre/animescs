@@ -109,6 +109,8 @@ export default function Home() {
     if(e.target.value !== '' && filteredAnimes.length === 0){
       setShowMensagem(true);
       document.getElementById('pagesid').style.display = 'none';
+    } else if(e.target.value && filteredAnimes){
+      document.getElementById('pagesid').style.display = 'none';
     }
     else {
       setShowMensagem(false)
