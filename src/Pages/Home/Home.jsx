@@ -10,6 +10,10 @@ import ScrollToTop from 'react-scroll-to-top';
 
 export default function Home() {
   const [animes, setAnimes] = useState([
+    {nome:'Darling in the FranXX', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1133573047165648896/Darling_in_the_FranXX.png', link:'https://www.playbook.com/s/ajksz/HP3AiP7H93ZYwqW4AYMA1yqy'},
+    {nome:'Kiznaiver', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1133573056833540177/Kiznaiver.png', link:'https://www.playbook.com/s/ajksz/MAJYDXRofRfDoM3wwD76FcMg'},
+    {nome:'Koe no Katachi', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1133573073698836610/Koe_no_Katachi.png', link:'https://www.playbook.com/s/ajksz/zibQa916Aw9c1hgfu4HsxubA'},
+    {nome:'K-On! The Movie', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1133573083719012413/K-On_The_Movie.png', link:'https://www.playbook.com/s/ajksz/dxqN1M8a7MetBJmxKDUoo85L'},
     {nome:'I Want To Eat Your Pancreas', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1133206198783574076/I_want_to_eat_your_pancreas.png', link:'https://www.playbook.com/s/ajksz/Z6YAttgbwBnKpJrmQ17XTfsB'},
     {nome:'Jujutsu Kaisen Season 1', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1133206209038655538/Jujutsu_Kaisen_Season_1.png', link:'https://www.playbook.com/s/ajksz/CaKP9pJ2ZmtNeML5VBcc6EdL'},
     {nome:'K Project', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1133206219671207997/K_Project.png', link:'https://www.playbook.com/s/ajksz/ihsqKbfJb6raceu5Zd7qYwgP'},
