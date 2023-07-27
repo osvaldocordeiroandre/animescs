@@ -10,6 +10,10 @@ import ScrollToTop from 'react-scroll-to-top';
 
 export default function Home() {
   const [animes, setAnimes] = useState([
+    {nome:'Kuroko no Basket Movie 4 - Last Game', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1134197605841248337/Kuroko_no_Basket_Movie_4_-_Last_Game.png', link:'https://www.playbook.com/s/ajksz/HuFzoZ2N1bEkTFM7hi7Ke6wq'},
+    {nome:'Kuroko no Basket Winter Cup Movie 1 - Kage to Hikari', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1134197614557016074/Kuroko_no_Basket_Winter_Cup_Movie_1_-_Kage_to_Hikari.png', link:'https://www.playbook.com/s/ajksz/DzYkrY5yKd5wcEiPdBZgcHhj'},
+    {nome:'Kuroko no Basket Winter Cup Movie 2 - Namida no Saki e', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1134197623994191954/Kuroko_no_Basket_Winter_Cup_Movie_2_-_Namida_no_Saki_e.png', link:'https://www.playbook.com/s/ajksz/vs8aN7eWEENZbU2HwsWq2ytN'},
+    {nome:'Kuroko no BasketWinter Cup Movie 3 - Tobira no Mukou', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1134197631099359302/Kuroko_no_BasketWinter_Cup_Movie_3_-_Tobira_no_Mukou.png', link:'https://www.playbook.com/s/ajksz/gDJcC8zKbfnGA35tPeD6xapA'},
     {nome:'Darling in the FranXX', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1133573047165648896/Darling_in_the_FranXX.png', link:'https://www.playbook.com/s/ajksz/HP3AiP7H93ZYwqW4AYMA1yqy'},
     {nome:'Kiznaiver', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1133573056833540177/Kiznaiver.png', link:'https://www.playbook.com/s/ajksz/MAJYDXRofRfDoM3wwD76FcMg'},
     {nome:'Koe no Katachi', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1133573073698836610/Koe_no_Katachi.png', link:'https://www.playbook.com/s/ajksz/zibQa916Aw9c1hgfu4HsxubA'},
