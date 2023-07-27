@@ -10,6 +10,10 @@ import ScrollToTop from 'react-scroll-to-top';
 
 export default function Home() {
   const [animes, setAnimes] = useState([
+    {nome:'kyoukai no kanata season 1', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1134238745416179773/kyoukai_no_kanata_season_1.png', link:'https://www.playbook.com/s/ajksz/CFdbjD4UC9GwTwZFMLjxSunV'},
+    {nome:'Megalo Box Season 1', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1134238757898424371/Megalo_Box_Season_1.png', link:'https://www.playbook.com/s/ajksz/Gh2f9s6cWWZHcWicFNHMP3GE'},
+    {nome:'Mekakucity Actors', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1134238769386618980/Mekakucity_Actors.png', link:'https://www.playbook.com/s/ajksz/vmmnwRsgJ63v3UnmBKZTYRet'},
+    {nome:'Mob Psycho 100 Season 1', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1134238780258275409/Mob_Psycho_100_Season_1.png', link:'https://www.playbook.com/s/ajksz/YxBx7KoXKPpT2sbN9dUNZoYn'},
     {nome:'Kuroko no Basket Movie 4 - Last Game', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1134197605841248337/Kuroko_no_Basket_Movie_4_-_Last_Game.png', link:'https://www.playbook.com/s/ajksz/HuFzoZ2N1bEkTFM7hi7Ke6wq'},
     {nome:'Kuroko no Basket Winter Cup Movie 1 - Kage to Hikari', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1134197614557016074/Kuroko_no_Basket_Winter_Cup_Movie_1_-_Kage_to_Hikari.png', link:'https://www.playbook.com/s/ajksz/DzYkrY5yKd5wcEiPdBZgcHhj'},
     {nome:'Kuroko no Basket Winter Cup Movie 2 - Namida no Saki e', imagem:'https://cdn.discordapp.com/attachments/1117138599469666415/1134197623994191954/Kuroko_no_Basket_Winter_Cup_Movie_2_-_Namida_no_Saki_e.png', link:'https://www.playbook.com/s/ajksz/vs8aN7eWEENZbU2HwsWq2ytN'},
